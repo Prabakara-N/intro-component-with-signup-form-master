@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+:root {
+  --clr-red: #ff7a7a;
+  --clr-green: #38cc8c;
+  --clrBlue: #6055a5;
+  --clr-Dark-Blue: #3e3c49;
+  --clr-Grayish-Blue: #b9b6d3;
+  --clr-attribution: #3e52a3;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url(../images/bg-intro-desktop.png);
+  background-color: var(--clr-red);
+}
+
+.card {
+  width: 85%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* left */
+
+.left-container {
+  margin-top: 15rem;
+  color: white;
+}
+
+.main-title {
+  font-size: 2.5em;
+  font-weight: 700;
+  padding-bottom: 1.5rem;
+}
+
+/* right */
+.right-container {
+  margin-top: 8rem;
+}
+
+.login-card {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.input {
+  padding: 12px 150px 12px 20px;
+  border-radius: 5px;
+  border: 0.1px solid black;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 0.7rem 0;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.right-para {
+  font-size: 0.65rem;
+  padding-top: 0.9rem;
+  color: var(--clr-Grayish-Blue);
+}
+
+.right-para a {
+  color: #ff7a7a;
+  font-weight: bold;
+}
+
+.btn-green {
+  background-color: #38cc8c;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: bold;
+  padding: 14px 0;
+}
+
+.btn-green:hover {
+  background-color: #09b168;
+  transition: 0.3s;
+}
+
+.blue-btn {
+  padding: 15px 6rem;
+  background-color: var(--clrBlue);
+  color: white;
+}
+
+.blue-btn:hover {
+  background-color: #705bf5;
+  transition: 0.3s;
+}
+
+.color {
+  font-weight: bold;
+}
+
+/* media query */
+
+@media screen and (max-width: 768px) {
+  .card {
+    margin-top: -5rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left-container {
+    text-align: center;
+  }
+
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .right-container {
+    width: 80%;
+    margin: 3rem auto;
+  }
+
+  .input {
+    padding: 12px 50px 12px 10px;
+    font-size: 0.8rem;
+  }
+
+  .blue-btn {
+    padding: 1rem 3rem;
+  }
+}
