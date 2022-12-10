@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login Page</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <title>Frontend Mentor | Login Page</title>
     <!-- css -->
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
@@ -29,33 +31,52 @@
           <span class="color">Try it free 7 days</span> then $20/mo. thereafter
         </button>
         <div class="login-card">
-          <div class="inputs">
-            <label for="name">
+          <form id="form" class="inputs">
+            <div class="input-div">
               <input
                 type="text"
                 placeholder="First Name"
-                class="input"
+                class="user-input"
+                id="fname"
                 required
-            /></label>
-            <label for="name">
-              <input type="text" placeholder="Last Name" class="input" required
-            /></label>
-            <label for="email"
-              ><input
+              />
+              <p class="err-msg">First name can't be empty</p>
+            </div>
+            <div class="input-div">
+              <input
+                type="text"
+                id="lname"
+                placeholder="Last Name"
+                class="user-input"
+                required
+              />
+              <p class="err-msg">Last name can't be empty</p>
+            </div>
+            <div class="input-div">
+              <input
                 type="email"
+                id="mail"
                 placeholder="Email Address"
-                class="input"
+                class="user-input"
                 required
-            /></label>
-            <label for="password"
-              ><input
+              />
+              <p class="err-msg">Email can't be empty</p>
+            </div>
+            <div class="input-div">
+              <input
                 type="password"
+                id="pw"
                 placeholder="Password"
-                class="input"
+                class="user-input"
                 required
-            /></label>
-            <button class="btn btn-green">CLAIM YOUR FREE TRIAL</button>
-          </div>
+              />
+              <p class="err-msg">Password can't be empty</p>
+            </div>
+
+            <button class="btn btn-green" id="btn-submit">
+              CLAIM YOUR FREE TRIAL
+            </button>
+          </form>
           <p class="right-para">
             By clicking the button, you are agreeing to our
             <a href="#">Terms and Services</a>
@@ -63,5 +84,7 @@
         </div>
       </section>
     </main>
+    <!-- custom javascript -->
+    <script src="./scripts/script.js"></script>
   </body>
 </html>

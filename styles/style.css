@@ -33,22 +33,30 @@ html {
 }
 
 body {
+  width: 100%;
+  margin: 3rem auto;
   font-family: "Poppins", sans-serif;
   background-image: url(../images/bg-intro-desktop.png);
   background-color: var(--clr-red);
+  max-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
-  width: 85%;
+  width: 80%;
+  margin: auto;
+  height: 70vh;
   margin: auto;
   display: flex;
+  align-items: center;
   justify-content: space-around;
 }
 
 /* left */
 
 .left-container {
-  margin-top: 15rem;
   color: white;
 }
 
@@ -59,8 +67,9 @@ body {
 }
 
 /* right */
+
 .right-container {
-  margin-top: 8rem;
+  margin-top: 4rem;
 }
 
 .login-card {
@@ -80,11 +89,33 @@ body {
   gap: 1.2rem;
 }
 
-.input {
+.user-input {
   padding: 12px 150px 12px 20px;
   border-radius: 5px;
-  border: 0.1px solid black;
+  border: 2px solid black;
   font-weight: bold;
+  outline-style: none;
+  cursor: pointer;
+}
+
+.error-bg {
+  background-image: url(../images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-size: 22px;
+  background-position: 95% 50%;
+  border: 2px solid orangered;
+  border-radius: 5px;
+}
+
+.err-msg {
+  display: none;
+  font-style: italic;
+  margin-left: auto;
+  padding-top: 5px;
+  color: orangered;
+  font-size: 0.65rem;
+  font-weight: bold;
+  text-align: right;
 }
 
 .btn {
@@ -137,15 +168,25 @@ body {
 /* media query */
 
 @media screen and (max-width: 768px) {
+  body {
+    margin: auto;
+    max-height: 0;
+    min-height: 100vh;
+  }
   .card {
-    margin-top: -5rem;
-    padding-bottom: 3rem;
+    width: 85%;
+    margin: 3rem auto;
+    max-height: 0;
+    min-height: 100vh;
+    padding: 2rem;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
   }
 
   .left-container {
+    margin-top: 3rem;
     text-align: center;
   }
 
@@ -154,16 +195,18 @@ body {
   }
 
   .right-container {
-    width: 80%;
+    width: 450px;
     margin: 3rem auto;
   }
 
   .input {
-    padding: 12px 50px 12px 10px;
     font-size: 0.8rem;
   }
+}
 
-  .blue-btn {
-    padding: 1rem 3rem;
+@media screen and (max-width: 475px) {
+  .right-container {
+    width: 400px;
+    margin: 3rem auto;
   }
 }
